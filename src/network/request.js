@@ -27,4 +27,4 @@ export function request(config) {
    return instance(config) //这里返回的是promise 其实函数调用时可以直接.then
  }
 
- // export default  axios
+

@@ -38,6 +38,7 @@ export default {
   max-width: 100%;
 }
 
+
 .recommend-title{
   text-align: center;
   margin-top: 8px;

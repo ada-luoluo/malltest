@@ -7,6 +7,8 @@ const home = () => import('../views/home/Home') //组件首字母要大写 懒�
 const category = () => import('../views/category/Category')
 const cart = () => import('../views/cart/Cart')
 const profile = () => import('../views/profile/Profile')
+const detail =() => import('../views/detail/Detail')
+
 
 const routes = [
   {
@@ -28,6 +30,10 @@ const routes = [
   {
     path: '/profile',
     component: profile
+  },
+  {
+    path: '/detail/:iid',
+    component: detail
   },
 ]
 

@@ -2,12 +2,11 @@
 <div class="param-info" v-if="Object.keys(paramInfo).length !== 0">
 <!--  遍历td的方法-->
   <table v-for="(table, index) in paramInfo.sizes" class="info-size" :key="index">
-<tr v-for="(tr,index) in table" :key="index">
-  <td v-for="(td, index) in tr" :key="index">
-    {{td}}
-  </td>
-</tr>
-
+    <tr v-for="(tr,index) in table" :key="index">
+      <td v-for="(td, index) in tr" :key="index">
+        {{td}}
+      </td>
+    </tr>
 </table>
  </div>
 </template>
@@ -27,5 +26,15 @@ export default {
 </script>
 
 <style scoped>
+
+.param-info table{
+  width: 100%;
+
+}
+
+.param-info table td{
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
 
 </style>

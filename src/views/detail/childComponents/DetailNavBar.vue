@@ -1,20 +1,23 @@
 <template>
-<nav-bar>
-  <template #left>
-    <img src="@/assets/img/common/back.svg" alt=""
-         class="back" @click="backClick">
-  </template>
- <template #center>
-   <div class="title">
-     <div v-for="(item,index) in titles" :key="index"
-          class="title-item"
-          :class="{active: index === currentIndex}"
-          @click="itemClick(index)">
-      {{item}}
-     </div>
-   </div>
- </template>
-</nav-bar>
+  <div class="detailnavbar">
+    <nav-bar>
+      <template #left>
+        <img src="@/assets/img/common/back.svg" alt=""
+             class="back" @click="backClick">
+      </template>
+      <template #center>
+        <div class="title">
+          <div v-for="(item,index) in titles" :key="index"
+               class="title-item"
+               :class="{active: index === currentIndex}"
+               @click="itemClick(index)">
+            {{item}}
+          </div>
+        </div>
+      </template>
+    </nav-bar>
+
+  </div>
 
 </template>
 
@@ -45,6 +48,16 @@ export default {
 </script>
 
 <style scoped>
+.detailnavbar{
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+  background-color: #fff;
+}
+
 .title{
  display: flex;
 }
@@ -54,7 +67,7 @@ export default {
 }
 .back{
   width: 24px;
-  padding-top: 10px;
+
 }
 .active{
   color: #ff5777;

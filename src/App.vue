@@ -18,4 +18,5 @@ export default {
 
 <style>
 @import "assets/css/base.css";
+@import "assets/css/layui.css";
 </style>

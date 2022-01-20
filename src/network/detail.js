@@ -1,5 +1,6 @@
 import {request} from "@/network/request";
 
+//请求商品详情接口
 export function getDetail(iid){
   return request({
     url: '/detail',
@@ -40,7 +41,6 @@ export class Shop{
 }
 
 //获取产品参数
-
 export class GoodsParam{
   constructor(info, rule) {
     //这里判断了如果为空不传
@@ -50,5 +50,14 @@ export class GoodsParam{
 
   }
 }
+
+//请求商品推荐接口
+export function getRecommend(){
+  return request({
+    url: '/recommend',
+ })
+}
+
+
 
 

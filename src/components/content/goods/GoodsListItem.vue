@@ -2,7 +2,9 @@
 
 
 <div class="good-item" @click="itemClick">
-    <img :src="showImg" alt="">
+<!--    <img :src="showImg" alt="">-->
+  <img v-lazy="showImg" alt=""><!-- 这是使用了图片懒加载  -->
+
 <!--其他组件数据格式相同,可多次使用这个组件,不同的地方比较少的话,可以通过计算属性做判断先.
 比如这里推荐商品列表和首页的商品列表是一样的,所以可以使用同个组件,不同的是产品图的数据结构有点不一样而已 -->
     <div class="good-item-title">
